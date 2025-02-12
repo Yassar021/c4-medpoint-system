@@ -1,0 +1,2057 @@
+{
+  "configuration" : { },
+  "description" : "platform yang memungkinkan pengguna untuk melakukan berbagai jenis reservasi medis online",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-02-12T19:55:04Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Make reservations and make payments",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "User",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "relationships" : [ {
+        "destinationId" : "6",
+        "id" : "61",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "5",
+        "id" : "62",
+        "linkedRelationshipId" : "61",
+        "sourceId" : "1"
+      }, {
+        "description" : "'Uses'",
+        "destinationId" : "7",
+        "id" : "124",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "'Uses'",
+        "destinationId" : "9",
+        "id" : "130",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "14",
+        "id" : "135",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "16",
+        "id" : "139",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "19",
+        "id" : "141",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "21",
+        "id" : "145",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Manages master data, schedules, reservations, and payments",
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Super Admin",
+      "properties" : {
+        "structurizr.dsl.identifier" : "superadmin"
+      },
+      "relationships" : [ {
+        "destinationId" : "23",
+        "id" : "59",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "5",
+        "id" : "60",
+        "linkedRelationshipId" : "59",
+        "sourceId" : "2"
+      }, {
+        "description" : "Makes API Calls to [json/https]",
+        "destinationId" : "24",
+        "id" : "108",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "'Uses'",
+        "destinationId" : "37",
+        "id" : "112",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "'Uses'",
+        "destinationId" : "31",
+        "id" : "118",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Manage data user",
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Admin",
+      "properties" : {
+        "structurizr.dsl.identifier" : "admin"
+      },
+      "relationships" : [ {
+        "destinationId" : "23",
+        "id" : "57",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "5",
+        "id" : "58",
+        "linkedRelationshipId" : "57",
+        "sourceId" : "3"
+      }, {
+        "description" : "Makes API Calls to [json/https]",
+        "destinationId" : "24",
+        "id" : "73",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "26",
+        "id" : "79",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "27",
+        "id" : "82",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "29",
+        "id" : "88",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "33",
+        "id" : "94",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "35",
+        "id" : "101",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Provides reservation slots and conducts consultations",
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Doctor",
+      "properties" : {
+        "structurizr.dsl.identifier" : "doctor"
+      },
+      "relationships" : [ {
+        "destinationId" : "6",
+        "id" : "63",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "5",
+        "id" : "64",
+        "linkedRelationshipId" : "63",
+        "sourceId" : "4"
+      }, {
+        "destinationId" : "17",
+        "id" : "149",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "14",
+        "id" : "155",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "components" : [ {
+          "description" : "login screen for user & doctor",
+          "documentation" : { },
+          "id" : "7",
+          "name" : "Login Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "loginscreen"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "8",
+            "id" : "125",
+            "sourceId" : "7",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "validate input dan send data to authService",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Login Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "logincontroller"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "40",
+            "id" : "126",
+            "sourceId" : "8",
+            "tags" : "Relationship"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "39",
+            "id" : "127",
+            "linkedRelationshipId" : "126",
+            "sourceId" : "8"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "register screen for user & doctor",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Register Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "registerscreen"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "10",
+            "id" : "131",
+            "sourceId" : "9",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "validate input dan send data register to AuthModule",
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Register Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "registercontroller"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "40",
+            "id" : "132",
+            "sourceId" : "10",
+            "tags" : "Relationship"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "39",
+            "id" : "133",
+            "linkedRelationshipId" : "132",
+            "sourceId" : "10"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "home screen for user & doctor",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Home Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "homescreen"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Edit Profile screen for user & doctor",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Edit Profile Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "editprofilescreen"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "edit data dan send data to userManagement",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Edit Profile Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "editprofilecontroller"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "add, edit or cancel reservation",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Reservation Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationscreen"
+          },
+          "relationships" : [ {
+            "destinationId" : "15",
+            "id" : "136",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "15",
+            "id" : "156",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "add, edit or cancel reservation",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Reservation Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "48",
+            "id" : "137",
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "41",
+            "id" : "157",
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "39",
+            "id" : "158",
+            "linkedRelationshipId" : "157",
+            "sourceId" : "15"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "find a reservation",
+          "documentation" : { },
+          "id" : "16",
+          "name" : "Search Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "seacrhcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "48",
+            "id" : "140",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI for the doctor",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "doctor Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctorscreen"
+          },
+          "relationships" : [ {
+            "destinationId" : "18",
+            "id" : "150",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "fetch doctor information",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "doctor Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctorcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "43",
+            "id" : "151",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "39",
+            "id" : "152",
+            "linkedRelationshipId" : "151",
+            "sourceId" : "18"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI view to payment and billing",
+          "documentation" : { },
+          "id" : "19",
+          "name" : "payment Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentscreen"
+          },
+          "relationships" : [ {
+            "destinationId" : "20",
+            "id" : "142",
+            "sourceId" : "19",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "handle transaction payment",
+          "documentation" : { },
+          "id" : "20",
+          "name" : "Payment Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "55",
+            "id" : "143",
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI view to list notification",
+          "documentation" : { },
+          "id" : "21",
+          "name" : "Notification Screen",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notificationscreen"
+          },
+          "relationships" : [ {
+            "destinationId" : "22",
+            "id" : "146",
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "fetch notification update",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "Notification Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notificationcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "56",
+            "id" : "147",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "The mobile app for the Medpoint architecture project.",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "Mobile App",
+        "properties" : {
+          "structurizr.dsl.identifier" : "mobile"
+        },
+        "relationships" : [ {
+          "destinationId" : "39",
+          "id" : "66",
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "'Uses'",
+          "destinationId" : "40",
+          "id" : "128",
+          "linkedRelationshipId" : "126",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "48",
+          "id" : "138",
+          "linkedRelationshipId" : "137",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "55",
+          "id" : "144",
+          "linkedRelationshipId" : "143",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "56",
+          "id" : "148",
+          "linkedRelationshipId" : "147",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "43",
+          "id" : "153",
+          "linkedRelationshipId" : "151",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "41",
+          "id" : "159",
+          "linkedRelationshipId" : "157",
+          "sourceId" : "6"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Flutter"
+      }, {
+        "components" : [ {
+          "description" : "login/logout admin & superAdmin",
+          "documentation" : { },
+          "id" : "24",
+          "name" : "Login Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "loginpage"
+          },
+          "relationships" : [ {
+            "destinationId" : "25",
+            "id" : "74",
+            "sourceId" : "24",
+            "tags" : "Relationship"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "25",
+            "id" : "109",
+            "sourceId" : "24",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Manage logic admin and superAdmin to login the medpoint system",
+          "documentation" : { },
+          "id" : "25",
+          "name" : "Login Page Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "loginpagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "40",
+            "id" : "75",
+            "sourceId" : "25",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "39",
+            "id" : "76",
+            "linkedRelationshipId" : "75",
+            "sourceId" : "25"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "40",
+            "id" : "110",
+            "sourceId" : "25",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Display summary of important data (number of reservations, active doctors, etc.)",
+          "documentation" : { },
+          "id" : "26",
+          "name" : "Dashboard Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dashboardpage"
+          },
+          "relationships" : [ {
+            "description" : "Reads from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "80",
+            "sourceId" : "26",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Display, manage, and modify reservation data",
+          "documentation" : { },
+          "id" : "27",
+          "name" : "Reservation Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationpage"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "28",
+            "id" : "83",
+            "sourceId" : "27",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "handle logic find, search, and cancel the reservations",
+          "documentation" : { },
+          "id" : "28",
+          "name" : "Reservation Page Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationpagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "41",
+            "id" : "84",
+            "sourceId" : "28",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "39",
+            "id" : "85",
+            "linkedRelationshipId" : "84",
+            "sourceId" : "28"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI to views the list of doctors and their schedules",
+          "documentation" : { },
+          "id" : "29",
+          "name" : "Doctor Management Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctormanagementpage"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "30",
+            "id" : "89",
+            "sourceId" : "29",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage the list of doctors and their schedules",
+          "documentation" : { },
+          "id" : "30",
+          "name" : "Doctor Management Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctormanagementpagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "43",
+            "id" : "90",
+            "sourceId" : "30",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "39",
+            "id" : "91",
+            "linkedRelationshipId" : "90",
+            "sourceId" : "30"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI to fetch and manage like faskes, clinics and services",
+          "documentation" : { },
+          "id" : "31",
+          "name" : "Master Data Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "masterdatapage"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "32",
+            "id" : "119",
+            "sourceId" : "31",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "CRUD for health faskes, clinics, services, etc",
+          "documentation" : { },
+          "id" : "32",
+          "name" : "Master Data Page Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "masterdatapagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "44",
+            "id" : "120",
+            "sourceId" : "32",
+            "tags" : "Relationship"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "39",
+            "id" : "121",
+            "linkedRelationshipId" : "120",
+            "sourceId" : "32"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "UI to display billing and payment status",
+          "documentation" : { },
+          "id" : "33",
+          "name" : "Payment Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentpage"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "34",
+            "id" : "95",
+            "sourceId" : "33",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage billing and payment status then validate the transaction",
+          "documentation" : { },
+          "id" : "34",
+          "name" : "Payment Module Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentpagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "Uses",
+            "destinationId" : "45",
+            "id" : "96",
+            "sourceId" : "34",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Uses",
+            "destinationId" : "39",
+            "id" : "97",
+            "linkedRelationshipId" : "96",
+            "sourceId" : "34"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Display system notifications",
+          "documentation" : { },
+          "id" : "35",
+          "name" : "Notification Module Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notificationpage"
+          },
+          "relationships" : [ {
+            "destinationId" : "36",
+            "id" : "102",
+            "sourceId" : "35",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage the system notifications",
+          "documentation" : { },
+          "id" : "36",
+          "name" : "Notification Module Page Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notificationpagecontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "46",
+            "id" : "103",
+            "sourceId" : "36",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "39",
+            "id" : "104",
+            "linkedRelationshipId" : "103",
+            "sourceId" : "36"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "views user data (Admin, Doctor, User)",
+          "documentation" : { },
+          "id" : "37",
+          "name" : "User Management Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "usermanagementpage"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "38",
+            "id" : "113",
+            "sourceId" : "37",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Manage the user system data",
+          "documentation" : { },
+          "id" : "38",
+          "name" : "User Management Page Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "usermanagementpagecontroller"
+          },
+          "relationships" : [ {
+            "description" : "'Uses'",
+            "destinationId" : "42",
+            "id" : "114",
+            "sourceId" : "38",
+            "tags" : "Relationship"
+          }, {
+            "description" : "'Uses'",
+            "destinationId" : "39",
+            "id" : "115",
+            "linkedRelationshipId" : "114",
+            "sourceId" : "38"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "The web app for the Medpoint architecture project.",
+        "documentation" : { },
+        "id" : "23",
+        "name" : "Web Frontend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "web"
+        },
+        "relationships" : [ {
+          "destinationId" : "39",
+          "id" : "65",
+          "sourceId" : "23",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Uses",
+          "destinationId" : "40",
+          "id" : "77",
+          "linkedRelationshipId" : "75",
+          "sourceId" : "23"
+        }, {
+          "description" : "Reads from and writes to [SQL/TCP]",
+          "destinationId" : "48",
+          "id" : "81",
+          "linkedRelationshipId" : "80",
+          "sourceId" : "23"
+        }, {
+          "description" : "Uses",
+          "destinationId" : "41",
+          "id" : "86",
+          "linkedRelationshipId" : "84",
+          "sourceId" : "23"
+        }, {
+          "description" : "Uses",
+          "destinationId" : "43",
+          "id" : "92",
+          "linkedRelationshipId" : "90",
+          "sourceId" : "23"
+        }, {
+          "description" : "Uses",
+          "destinationId" : "45",
+          "id" : "98",
+          "linkedRelationshipId" : "96",
+          "sourceId" : "23"
+        }, {
+          "destinationId" : "46",
+          "id" : "105",
+          "linkedRelationshipId" : "103",
+          "sourceId" : "23"
+        }, {
+          "description" : "'Uses'",
+          "destinationId" : "42",
+          "id" : "116",
+          "linkedRelationshipId" : "114",
+          "sourceId" : "23"
+        }, {
+          "description" : "'Uses'",
+          "destinationId" : "44",
+          "id" : "122",
+          "linkedRelationshipId" : "120",
+          "sourceId" : "23"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "React JS"
+      }, {
+        "components" : [ {
+          "description" : "manage authentication users",
+          "documentation" : { },
+          "id" : "40",
+          "name" : "Auth Module",
+          "properties" : {
+            "structurizr.dsl.identifier" : "authmodule"
+          },
+          "relationships" : [ {
+            "description" : "Reads from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "78",
+            "sourceId" : "40",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Read from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "111",
+            "sourceId" : "40",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "48",
+            "id" : "129",
+            "sourceId" : "40",
+            "tags" : "Relationship"
+          }, {
+            "description" : "[TCP/IP]",
+            "destinationId" : "48",
+            "id" : "134",
+            "sourceId" : "40",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage reservation (make, edit, reschedjule)",
+          "documentation" : { },
+          "id" : "41",
+          "name" : "Reservation Module",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationmodule"
+          },
+          "relationships" : [ {
+            "description" : "Reads from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "87",
+            "sourceId" : "41",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "48",
+            "id" : "160",
+            "sourceId" : "41",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "CRUD User Data (Super Admin, Admin, User, Doctor)",
+          "documentation" : { },
+          "id" : "42",
+          "name" : "User Management Module",
+          "properties" : {
+            "structurizr.dsl.identifier" : "usermanagement"
+          },
+          "relationships" : [ {
+            "description" : "Read from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "117",
+            "sourceId" : "42",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "CRUD Doctor Management",
+          "documentation" : { },
+          "id" : "43",
+          "name" : "Doctor Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctordatamanagement"
+          },
+          "relationships" : [ {
+            "description" : "Reads from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "93",
+            "sourceId" : "43",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "48",
+            "id" : "154",
+            "sourceId" : "43",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage data faskes, poli, layanan and adress",
+          "documentation" : { },
+          "id" : "44",
+          "name" : "Master Data Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "masterdataservice"
+          },
+          "relationships" : [ {
+            "description" : "Read from and writes to [SQL/TCP]",
+            "destinationId" : "48",
+            "id" : "123",
+            "sourceId" : "44",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage payment reservation integrated with midtrans",
+          "documentation" : { },
+          "id" : "45",
+          "name" : "Payment Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentservice"
+          },
+          "relationships" : [ {
+            "description" : "Using Payment",
+            "destinationId" : "55",
+            "id" : "99",
+            "sourceId" : "45",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "manage notification user reservation integrated with firebase",
+          "documentation" : { },
+          "id" : "46",
+          "name" : "Notification Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notificationservice"
+          },
+          "relationships" : [ {
+            "destinationId" : "56",
+            "id" : "106",
+            "sourceId" : "46",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "endpoint to communicate with frontend web and mobile",
+          "documentation" : { },
+          "id" : "47",
+          "name" : "API Gateway",
+          "properties" : {
+            "structurizr.dsl.identifier" : "apigateway"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Backend services for the application.",
+        "documentation" : { },
+        "id" : "39",
+        "name" : "Backend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend"
+        },
+        "relationships" : [ {
+          "destinationId" : "48",
+          "id" : "67",
+          "sourceId" : "39",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Using Payment",
+          "destinationId" : "55",
+          "id" : "100",
+          "linkedRelationshipId" : "99",
+          "sourceId" : "39"
+        }, {
+          "destinationId" : "56",
+          "id" : "107",
+          "linkedRelationshipId" : "106",
+          "sourceId" : "39"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Golang Raiden"
+      }, {
+        "components" : [ {
+          "description" : "Stores users data.",
+          "documentation" : { },
+          "id" : "49",
+          "name" : "Users Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userstable"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores reservations data.",
+          "documentation" : { },
+          "id" : "50",
+          "name" : "Reservation Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reservationtable"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores doctors data.",
+          "documentation" : { },
+          "id" : "51",
+          "name" : "Doctors Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "doctorstable"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores faskes, poli, layanan & alamat data.",
+          "documentation" : { },
+          "id" : "52",
+          "name" : "Master Data Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "masterdatatable"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores payments data.",
+          "documentation" : { },
+          "id" : "53",
+          "name" : "Payment Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentstable"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores notifications data.",
+          "documentation" : { },
+          "id" : "54",
+          "name" : "Notification Tabel",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notficationtable"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Stores all data for the application.",
+        "documentation" : { },
+        "id" : "48",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "relationships" : [ {
+          "destinationId" : "55",
+          "id" : "68",
+          "sourceId" : "48",
+          "tags" : "Relationship"
+        }, {
+          "destinationId" : "56",
+          "id" : "70",
+          "sourceId" : "48",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "PostgreSQL"
+      } ],
+      "description" : "platform yang memungkinkan pengguna untuk melakukan berbagai jenis reservasi medis online",
+      "documentation" : { },
+      "id" : "5",
+      "location" : "Unspecified",
+      "name" : "Medpoint System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "mainsystem"
+      },
+      "relationships" : [ {
+        "destinationId" : "55",
+        "id" : "69",
+        "linkedRelationshipId" : "68",
+        "sourceId" : "5"
+      }, {
+        "destinationId" : "56",
+        "id" : "71",
+        "linkedRelationshipId" : "70",
+        "sourceId" : "5"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Using Midtrans for Online Payment",
+      "documentation" : { },
+      "id" : "55",
+      "location" : "Unspecified",
+      "name" : "Payment Gateway",
+      "properties" : {
+        "structurizr.dsl.identifier" : "paymentsystem"
+      },
+      "tags" : "Element,Software System,Midtrans"
+    }, {
+      "description" : "Using Firebase for Notification User",
+      "documentation" : { },
+      "id" : "56",
+      "location" : "Unspecified",
+      "name" : "Notication Services",
+      "properties" : {
+        "structurizr.dsl.identifier" : "notificationsystem"
+      },
+      "relationships" : [ {
+        "destinationId" : "1",
+        "id" : "72",
+        "sourceId" : "56",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "medpoint-architecture",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgIG5hbWUgIm1lZHBvaW50LWFyY2hpdGVjdHVyZSIKICAgIGRlc2NyaXB0aW9uICJwbGF0Zm9ybSB5YW5nIG1lbXVuZ2tpbmthbiBwZW5nZ3VuYSB1bnR1ayBtZWxha3VrYW4gYmVyYmFnYWkgamVuaXMgcmVzZXJ2YXNpIG1lZGlzIG9ubGluZSIKCiAgICBtb2RlbCB7CiAgICAgICAgLy8gUGVvcGxlIChVc2VycykKICAgICAgICB1c2VyID0gcGVyc29uICJVc2VyIiAiTWFrZSByZXNlcnZhdGlvbnMgYW5kIG1ha2UgcGF5bWVudHMiCiAgICAgICAgCiAgICAgICAgc3VwZXJBZG1pbiA9IHBlcnNvbiAiU3VwZXIgQWRtaW4iICJNYW5hZ2VzIG1hc3RlciBkYXRhLCBzY2hlZHVsZXMsIHJlc2VydmF0aW9ucywgYW5kIHBheW1lbnRzIgogICAgICAgIAogICAgICAgIGFkbWluID0gcGVyc29uICJBZG1pbiIgIiBNYW5hZ2UgZGF0YSB1c2VyIgogICAgICAgIAogICAgICAgIGRvY3RvciA9IHBlcnNvbiAiRG9jdG9yIiAiUHJvdmlkZXMgcmVzZXJ2YXRpb24gc2xvdHMgYW5kIGNvbmR1Y3RzIGNvbnN1bHRhdGlvbnMiCgogICAgICAgIC8vIE1haW4gU3lzdGVtCiAgICAgICAgbWFpblN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJNZWRwb2ludCBTeXN0ZW0iIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gInBsYXRmb3JtIHlhbmcgbWVtdW5na2lua2FuIHBlbmdndW5hIHVudHVrIG1lbGFrdWthbiBiZXJiYWdhaSBqZW5pcyByZXNlcnZhc2kgbWVkaXMgb25saW5lIgogICAgICAgIAogICAgICAgICAgICAvLyBNb2JpbGUgQXBwbGljYXRpb24gY29udGFpbmVyCiAgICAgICAgICAgIG1vYmlsZSA9IGNvbnRhaW5lciAiTW9iaWxlIEFwcCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlRoZSBtb2JpbGUgYXBwIGZvciB0aGUgTWVkcG9pbnQgYXJjaGl0ZWN0dXJlIHByb2plY3QuIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiRmx1dHRlciIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgLy8gTW9kdWxlIExvZ2luIAogICAgICAgICAgICAgICAgbG9naW5TY3JlZW4gPSBjb21wb25lbnQgIkxvZ2luIFNjcmVlbiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJsb2dpbiBzY3JlZW4gZm9yIHVzZXIgJiBkb2N0b3IiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBsb2dpbkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIkxvZ2luIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAidmFsaWRhdGUgaW5wdXQgZGFuIHNlbmQgZGF0YSB0byBhdXRoU2VydmljZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBNb2R1bGUgUmVnaXN0ZXIKICAgICAgICAgICAgICAgIHJlZ2lzdGVyU2NyZWVuID0gY29tcG9uZW50ICJSZWdpc3RlciBTY3JlZW4iIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAicmVnaXN0ZXIgc2NyZWVuIGZvciB1c2VyICYgZG9jdG9yIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgcmVnaXN0ZXJDb250cm9sbGVyID0gY29tcG9uZW50ICJSZWdpc3RlciBDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gInZhbGlkYXRlIGlucHV0IGRhbiBzZW5kIGRhdGEgcmVnaXN0ZXIgdG8gQXV0aE1vZHVsZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBNb2R1bGUgSG9tZQogICAgICAgICAgICAgICAgaG9tZVNjcmVlbiA9IGNvbXBvbmVudCAiSG9tZSBTY3JlZW4iIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiaG9tZSBzY3JlZW4gZm9yIHVzZXIgJiBkb2N0b3IiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgLy8gTW9kdWxlIEVkaXQgUHJvZmlsZQogICAgICAgICAgICAgICAgZWRpdFByb2ZpbGVTY3JlZW4gPSBjb21wb25lbnQgIkVkaXQgUHJvZmlsZSBTY3JlZW4iIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiRWRpdCBQcm9maWxlIHNjcmVlbiBmb3IgdXNlciAmIGRvY3RvciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGVkaXRQcm9maWxlQ29udHJvbGxlciA9IGNvbXBvbmVudCAiRWRpdCBQcm9maWxlIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiZWRpdCBkYXRhIGRhbiBzZW5kIGRhdGEgdG8gdXNlck1hbmFnZW1lbnQiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgLy8gTW9kdWxlIFJlc2VydmF0aW9uCiAgICAgICAgICAgICAgICByZXNlcnZhdGlvblNjcmVlbiA9IGNvbXBvbmVudCAiUmVzZXJ2YXRpb24gU2NyZWVuIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gImFkZCwgZWRpdCBvciBjYW5jZWwgcmVzZXJ2YXRpb24iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICByZXNlcnZhdGlvbkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlJlc2VydmF0aW9uIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiYWRkLCBlZGl0IG9yIGNhbmNlbCByZXNlcnZhdGlvbiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBNb2R1bGUgU2VhcmNoCiAgICAgICAgICAgICAgICBzZWFjcmhDb250cm9sbGVyID0gY29tcG9uZW50ICJTZWFyY2ggQ29udHJvbGxlciIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJmaW5kIGEgcmVzZXJ2YXRpb24iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgLy8gTW9kdWxlIERvY3RvcgogICAgICAgICAgICAgICAgZG9jdG9yU2NyZWVuID0gY29tcG9uZW50ICJkb2N0b3IgU2NyZWVuIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlVJIGZvciB0aGUgZG9jdG9yIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZG9jdG9yQ29udHJvbGxlciA9IGNvbXBvbmVudCAiZG9jdG9yIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiZmV0Y2ggZG9jdG9yIGluZm9ybWF0aW9uIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIE1vZHVsZSBQYXltZW50CiAgICAgICAgICAgICAgICBwYXltZW50U2NyZWVuID0gY29tcG9uZW50ICJwYXltZW50IFNjcmVlbiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJVSSB2aWV3IHRvIHBheW1lbnQgYW5kIGJpbGxpbmciCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBwYXltZW50Q29udHJvbGxlciA9IGNvbXBvbmVudCAiUGF5bWVudCBDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gImhhbmRsZSB0cmFuc2FjdGlvbiBwYXltZW50IgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIE1vZHVsZSBOb3RpZmljYXRpb24KICAgICAgICAgICAgICAgIG5vdGlmaWNhdGlvblNjcmVlbiA9IGNvbXBvbmVudCAiTm90aWZpY2F0aW9uIFNjcmVlbiIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJVSSB2aWV3IHRvIGxpc3Qgbm90aWZpY2F0aW9uIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgbm90aWZpY2F0aW9uQ29udHJvbGxlciA9IGNvbXBvbmVudCAiTm90aWZpY2F0aW9uIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiZmV0Y2ggbm90aWZpY2F0aW9uIHVwZGF0ZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgLy8gV2ViIEFwcGxpY2F0aW9uIGNvbnRhaW5lcgogICAgICAgICAgICB3ZWIgPSBjb250YWluZXIgIldlYiBGcm9udGVuZCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlRoZSB3ZWIgYXBwIGZvciB0aGUgTWVkcG9pbnQgYXJjaGl0ZWN0dXJlIHByb2plY3QuIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiUmVhY3QgSlMiCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIEF1dGhlbnRpY2F0aW9uIE1vZHVsZQogICAgICAgICAgICAgICAgbG9naW5QYWdlID0gY29tcG9uZW50ICJMb2dpbiBQYWdlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gImxvZ2luL2xvZ291dCBhZG1pbiAmIHN1cGVyQWRtaW4iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgbG9naW5QYWdlQ29udHJvbGxlciA9IGNvbXBvbmVudCAiTG9naW4gUGFnZSBDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZSBsb2dpYyBhZG1pbiBhbmQgc3VwZXJBZG1pbiB0byBsb2dpbiB0aGUgbWVkcG9pbnQgc3lzdGVtIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIERhc2hib2FyZCBNb2R1bGUKICAgICAgICAgICAgICAgIGRhc2hib2FyZFBhZ2UgPSBjb21wb25lbnQgIkRhc2hib2FyZCBQYWdlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkRpc3BsYXkgc3VtbWFyeSBvZiBpbXBvcnRhbnQgZGF0YSAobnVtYmVyIG9mIHJlc2VydmF0aW9ucywgYWN0aXZlIGRvY3RvcnMsIGV0Yy4pIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIFJlc2VydmF0aW9uIE1vZHVsZQogICAgICAgICAgICAgICAgcmVzZXJ2YXRpb25QYWdlID0gY29tcG9uZW50ICJSZXNlcnZhdGlvbiBQYWdlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIiBEaXNwbGF5LCBtYW5hZ2UsIGFuZCBtb2RpZnkgcmVzZXJ2YXRpb24gZGF0YSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICByZXNlcnZhdGlvblBhZ2VDb250cm9sbGVyID0gY29tcG9uZW50ICJSZXNlcnZhdGlvbiBQYWdlIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiIGhhbmRsZSBsb2dpYyBmaW5kLCBzZWFyY2gsIGFuZCBjYW5jZWwgdGhlIHJlc2VydmF0aW9ucyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBkb2N0b3IgTW9kdWxlCiAgICAgICAgICAgICAgICBkb2N0b3JNYW5hZ2VtZW50UGFnZSA9IGNvbXBvbmVudCAiRG9jdG9yIE1hbmFnZW1lbnQgUGFnZSAiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiVUkgdG8gdmlld3MgdGhlIGxpc3Qgb2YgZG9jdG9ycyBhbmQgdGhlaXIgc2NoZWR1bGVzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIGRvY3Rvck1hbmFnZW1lbnRQYWdlQ29udHJvbGxlciA9IGNvbXBvbmVudCAiRG9jdG9yIE1hbmFnZW1lbnQgQ29udHJvbGxlciAiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAibWFuYWdlIHRoZSBsaXN0IG9mIGRvY3RvcnMgYW5kIHRoZWlyIHNjaGVkdWxlcyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAvLyBNYXN0ZXIgRGF0YSBNb2R1bGUKICAgICAgICAgICAgICAgIG1hc3RlckRhdGFQYWdlID0gY29tcG9uZW50ICJNYXN0ZXIgRGF0YSBQYWdlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlVJIHRvIGZldGNoIGFuZCBtYW5hZ2UgbGlrZSBmYXNrZXMsIGNsaW5pY3MgYW5kIHNlcnZpY2VzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIG1hc3RlckRhdGFQYWdlQ29udHJvbGxlciA9IGNvbXBvbmVudCAiTWFzdGVyIERhdGEgUGFnZSBDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNSVUQgZm9yIGhlYWx0aCBmYXNrZXMsIGNsaW5pY3MsIHNlcnZpY2VzLCBldGMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgLy8gUGF5bWVudCBNb2R1bGUKICAgICAgICAgICAgICAgIHBheW1lbnRQYWdlID0gY29tcG9uZW50ICJQYXltZW50IFBhZ2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiVUkgdG8gZGlzcGxheSBiaWxsaW5nIGFuZCBwYXltZW50IHN0YXR1cyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBwYXltZW50UGFnZUNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlBheW1lbnQgTW9kdWxlIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAibWFuYWdlIGJpbGxpbmcgYW5kIHBheW1lbnQgc3RhdHVzIHRoZW4gdmFsaWRhdGUgdGhlIHRyYW5zYWN0aW9uIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIE5vdGlmaWNhdGlvbiBNb2R1bGUKICAgICAgICAgICAgICAgIG5vdGlmaWNhdGlvblBhZ2UgPSBjb21wb25lbnQgIk5vdGlmaWNhdGlvbiBNb2R1bGUgUGFnZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJEaXNwbGF5IHN5c3RlbSBub3RpZmljYXRpb25zIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgbm90aWZpY2F0aW9uUGFnZUNvbnRyb2xsZXIgPSBjb21wb25lbnQgIk5vdGlmaWNhdGlvbiBNb2R1bGUgUGFnZSBDb250cm9sbGVyICIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJtYW5hZ2UgdGhlIHN5c3RlbSBub3RpZmljYXRpb25zIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIC8vIFVzZXIgTWFuYWdlbWVudCBNb2R1bGUKICAgICAgICAgICAgICAgIHVzZXJNYW5hZ2VtZW50UGFnZSAgPSBjb21wb25lbnQgIlVzZXIgTWFuYWdlbWVudCBQYWdlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gInZpZXdzIHVzZXIgZGF0YSAoQWRtaW4sIERvY3RvciwgVXNlcikiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdXNlck1hbmFnZW1lbnRQYWdlQ29udHJvbGxlciAgPSBjb21wb25lbnQgIlVzZXIgTWFuYWdlbWVudCBQYWdlIENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFuYWdlIHRoZSB1c2VyIHN5c3RlbSBkYXRhIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBCYWNrZW5kIGNvbnRhaW5lcgogICAgICAgICAgICBiYWNrZW5kID0gY29udGFpbmVyICJCYWNrZW5kIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQmFja2VuZCBzZXJ2aWNlcyBmb3IgdGhlIGFwcGxpY2F0aW9uLiIKICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIkdvbGFuZyBSYWlkZW4iCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIEF1dGhNb2R1bGUgPSBjb21wb25lbnQgIkF1dGggTW9kdWxlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIm1hbmFnZSBhdXRoZW50aWNhdGlvbiB1c2VycyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBSZXNlcnZhdGlvbk1vZHVsZSA9IGNvbXBvbmVudCAiUmVzZXJ2YXRpb24gTW9kdWxlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIm1hbmFnZSByZXNlcnZhdGlvbiAobWFrZSwgZWRpdCwgcmVzY2hlZGp1bGUpIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIFVzZXJNYW5hZ2VtZW50ID0gY29tcG9uZW50ICJVc2VyIE1hbmFnZW1lbnQgTW9kdWxlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNSVUQgVXNlciBEYXRhIChTdXBlciBBZG1pbiwgQWRtaW4sIFVzZXIsIERvY3RvcikiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgRG9jdG9yRGF0YU1hbmFnZW1lbnQgPSBjb21wb25lbnQgIkRvY3RvciBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNSVUQgRG9jdG9yIE1hbmFnZW1lbnQiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgTWFzdGVyRGF0YVNlcnZpY2UgPSBjb21wb25lbnQgIk1hc3RlciBEYXRhIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAibWFuYWdlIGRhdGEgZmFza2VzLCBwb2xpLCBsYXlhbmFuIGFuZCBhZHJlc3MiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgUGF5bWVudFNlcnZpY2UgPSBjb21wb25lbnQgIlBheW1lbnQgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJtYW5hZ2UgcGF5bWVudCByZXNlcnZhdGlvbiBpbnRlZ3JhdGVkIHdpdGggbWlkdHJhbnMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgTm90aWZpY2F0aW9uU2VydmljZSA9IGNvbXBvbmVudCAiTm90aWZpY2F0aW9uIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAibWFuYWdlIG5vdGlmaWNhdGlvbiB1c2VyIHJlc2VydmF0aW9uIGludGVncmF0ZWQgd2l0aCBmaXJlYmFzZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBhcGlHYXRld2F5ID0gY29tcG9uZW50ICJBUEkgR2F0ZXdheSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJlbmRwb2ludCB0byBjb21tdW5pY2F0ZSB3aXRoIGZyb250ZW5kIHdlYiBhbmQgbW9iaWxlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAvLyBEYXRhYmFzZSBjb250YWluZXIKICAgICAgICAgICAgZGF0YWJhc2UgPSBjb250YWluZXIgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIGFsbCBkYXRhIGZvciB0aGUgYXBwbGljYXRpb24uIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiUG9zdGdyZVNRTCIKICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB1c2Vyc1RhYmxlID0gY29tcG9uZW50ICJVc2VycyBUYWJlbCIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgdXNlcnMgZGF0YS4iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgcmVzZXJ2YXRpb25UYWJsZSA9IGNvbXBvbmVudCAiUmVzZXJ2YXRpb24gVGFiZWwiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIHJlc2VydmF0aW9ucyBkYXRhLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBkb2N0b3JzVGFibGUgPSBjb21wb25lbnQgIkRvY3RvcnMgVGFiZWwiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIGRvY3RvcnMgZGF0YS4iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgbWFzdGVyRGF0YVRhYmxlID0gY29tcG9uZW50ICJNYXN0ZXIgRGF0YSBUYWJlbCIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgZmFza2VzLCBwb2xpLCBsYXlhbmFuICYgYWxhbWF0IGRhdGEuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHBheW1lbnRzVGFibGUgPSBjb21wb25lbnQgIlBheW1lbnQgVGFiZWwiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIHBheW1lbnRzIGRhdGEuIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgICAgIG5vdGZpY2F0aW9uVGFibGUgPSBjb21wb25lbnQgIk5vdGlmaWNhdGlvbiBUYWJlbCIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgbm90aWZpY2F0aW9ucyBkYXRhLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgLy8gRXh0ZXJuYWwgU3lzdGVtCiAgICAgICAgLy8gQWRkIHlvdXIgZXh0ZXJuYWwgc3lzdGVtIGhlcmUKICAgICAgICBwYXltZW50U3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIlBheW1lbnQgR2F0ZXdheSIgIlVzaW5nIE1pZHRyYW5zIGZvciBPbmxpbmUgUGF5bWVudCIgIk1pZHRyYW5zIgogICAgICAgIAogICAgICAgIG5vdGlmaWNhdGlvblN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJOb3RpY2F0aW9uIFNlcnZpY2VzIiAiVXNpbmcgRmlyZWJhc2UgZm9yIE5vdGlmaWNhdGlvbiBVc2VyIgoKICAgICAgICAvLyBSZWxhdGlvbnNoaXBzCiAgICAgICAgLy8gQWRkIHlvdXIgcmVsYXRpb25zaGlwcyBoZXJlCiAgICAgICAgYWRtaW4gLT4gd2ViIAogICAgICAgICAgICBzdXBlckFkbWluIC0+IHdlYgogICAgICAgICAgICB1c2VyIC0+IG1vYmlsZQogICAgICAgICAgICBkb2N0b3IgLT4gbW9iaWxlCiAgICAgICAgICAgIHdlYiAtPiBiYWNrZW5kCiAgICAgICAgICAgIG1vYmlsZSAtPiBiYWNrZW5kCiAgICAgICAgICAgIGJhY2tlbmQgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgZGF0YWJhc2UgLT4gcGF5bWVudFN5c3RlbQogICAgICAgICAgICBkYXRhYmFzZSAtPiBub3RpZmljYXRpb25TeXN0ZW0KICAgICAgICAgICAgbm90aWZpY2F0aW9uU3lzdGVtIC0+IHVzZXIKICAgICAgICAvLyBBRE1JTgogICAgICAgICAgICBhZG1pbiAtPiBsb2dpblBhZ2UgIk1ha2VzIEFQSSBDYWxscyB0byBbanNvbi9odHRwc10iCiAgICAgICAgICAgIGxvZ2luUGFnZSAtPiBsb2dpblBhZ2VDb250cm9sbGVyIAogICAgICAgICAgICBsb2dpblBhZ2VDb250cm9sbGVyIC0+IEF1dGhNb2R1bGUgIlVzZXMiCiAgICAgICAgICAgIEF1dGhNb2R1bGUgLT4gZGF0YWJhc2UgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byBbU1FML1RDUF0iCiAgICAgICAgCiAgICAgICAgICAgIGFkbWluIC0+IGRhc2hib2FyZFBhZ2UKICAgICAgICAgICAgZGFzaGJvYXJkUGFnZSAtPiBkYXRhYmFzZSAiUmVhZHMgZnJvbSBhbmQgd3JpdGVzIHRvIFtTUUwvVENQXSIKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gcmVzZXJ2YXRpb25QYWdlCiAgICAgICAgICAgIHJlc2VydmF0aW9uUGFnZSAtPiByZXNlcnZhdGlvblBhZ2VDb250cm9sbGVyICJVc2VzIgogICAgICAgICAgICByZXNlcnZhdGlvblBhZ2VDb250cm9sbGVyIC0+IFJlc2VydmF0aW9uTW9kdWxlICJVc2VzIgogICAgICAgICAgICBSZXNlcnZhdGlvbk1vZHVsZSAtPiBkYXRhYmFzZSAiUmVhZHMgZnJvbSBhbmQgd3JpdGVzIHRvIFtTUUwvVENQXSIKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gZG9jdG9yTWFuYWdlbWVudFBhZ2UKICAgICAgICAgICAgZG9jdG9yTWFuYWdlbWVudFBhZ2UgLT4gZG9jdG9yTWFuYWdlbWVudFBhZ2VDb250cm9sbGVyICJVc2VzIgogICAgICAgICAgICBkb2N0b3JNYW5hZ2VtZW50UGFnZUNvbnRyb2xsZXIgLT4gRG9jdG9yRGF0YU1hbmFnZW1lbnQgIlVzZXMiCiAgICAgICAgICAgIERvY3RvckRhdGFNYW5hZ2VtZW50IC0+IGRhdGFiYXNlICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8gW1NRTC9UQ1BdIgogICAgICAgIAogICAgICAgICAgICBhZG1pbiAtPiBwYXltZW50UGFnZQogICAgICAgICAgICBwYXltZW50UGFnZSAtPiBwYXltZW50UGFnZUNvbnRyb2xsZXIgIlVzZXMiCiAgICAgICAgICAgIHBheW1lbnRQYWdlQ29udHJvbGxlciAtPiBQYXltZW50U2VydmljZSAiVXNlcyIKICAgICAgICAgICAgUGF5bWVudFNlcnZpY2UgLT4gcGF5bWVudFN5c3RlbSAiVXNpbmcgUGF5bWVudCIKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gbm90aWZpY2F0aW9uUGFnZQogICAgICAgICAgICBub3RpZmljYXRpb25QYWdlIC0+IG5vdGlmaWNhdGlvblBhZ2VDb250cm9sbGVyIAogICAgICAgICAgICBub3RpZmljYXRpb25QYWdlQ29udHJvbGxlciAtPiAgTm90aWZpY2F0aW9uU2VydmljZQogICAgICAgICAgICBOb3RpZmljYXRpb25TZXJ2aWNlIC0+IG5vdGlmaWNhdGlvblN5c3RlbQogICAgICAgIAogICAgICAgICAgICAvLyBzdXBlckFkbWluCiAgICAgICAgICAgIHN1cGVyQWRtaW4gLT4gbG9naW5QYWdlICJNYWtlcyBBUEkgQ2FsbHMgdG8gW2pzb24vaHR0cHNdIgogICAgICAgICAgICBsb2dpblBhZ2UgLT4gbG9naW5QYWdlQ29udHJvbGxlciAnVXNlcycKICAgICAgICAgICAgbG9naW5QYWdlQ29udHJvbGxlciAtPiBBdXRoTW9kdWxlICdVc2VzJwogICAgICAgICAgICBBdXRoTW9kdWxlIC0+IGRhdGFiYXNlICJSZWFkIGZyb20gYW5kIHdyaXRlcyB0byBbU1FML1RDUF0iCiAgICAgICAgCiAgICAgICAgICAgIHN1cGVyQWRtaW4gLT4gdXNlck1hbmFnZW1lbnRQYWdlICdVc2VzJwogICAgICAgICAgICB1c2VyTWFuYWdlbWVudFBhZ2UgLT4gdXNlck1hbmFnZW1lbnRQYWdlQ29udHJvbGxlciAnVXNlcycKICAgICAgICAgICAgdXNlck1hbmFnZW1lbnRQYWdlQ29udHJvbGxlciAtPiBVc2VyTWFuYWdlbWVudCAnVXNlcycKICAgICAgICAgICAgVXNlck1hbmFnZW1lbnQgLT4gZGF0YWJhc2UgIlJlYWQgZnJvbSBhbmQgd3JpdGVzIHRvIFtTUUwvVENQXSIKICAgICAgICAKICAgICAgICAgICAgc3VwZXJBZG1pbiAtPiBtYXN0ZXJEYXRhUGFnZSAnVXNlcycKICAgICAgICAgICAgbWFzdGVyRGF0YVBhZ2UgLT4gbWFzdGVyRGF0YVBhZ2VDb250cm9sbGVyICdVc2VzJwogICAgICAgICAgICBtYXN0ZXJEYXRhUGFnZUNvbnRyb2xsZXIgLT4gTWFzdGVyRGF0YVNlcnZpY2UgJ1VzZXMnCiAgICAgICAgICAgIE1hc3RlckRhdGFTZXJ2aWNlIC0+IGRhdGFiYXNlICJSZWFkIGZyb20gYW5kIHdyaXRlcyB0byBbU1FML1RDUF0iCiAgICAgICAgCiAgICAgICAgICAgIC8vIHVzZXIKICAgICAgICAgICAgdXNlciAtPiBsb2dpblNjcmVlbiAnVXNlcycKICAgICAgICAgICAgbG9naW5TY3JlZW4gLT4gbG9naW5Db250cm9sbGVyICdVc2VzJwogICAgICAgICAgICBsb2dpbkNvbnRyb2xsZXIgLT4gQXV0aE1vZHVsZSAnVXNlcycKICAgICAgICAgICAgQXV0aE1vZHVsZSAtPiBkYXRhYmFzZSAKICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiByZWdpc3RlclNjcmVlbiAnVXNlcycKICAgICAgICAgICAgcmVnaXN0ZXJTY3JlZW4gLT4gcmVnaXN0ZXJDb250cm9sbGVyICdVc2VzJwogICAgICAgICAgICByZWdpc3RlckNvbnRyb2xsZXIgLT4gQXV0aE1vZHVsZSAnVXNlcycKICAgICAgICAgICAgQXV0aE1vZHVsZSAtPiBkYXRhYmFzZSAiW1RDUC9JUF0iCiAgICAgICAgCiAgICAgICAgICAgIHVzZXIgLT4gcmVzZXJ2YXRpb25TY3JlZW4KICAgICAgICAgICAgcmVzZXJ2YXRpb25TY3JlZW4gLT4gcmVzZXJ2YXRpb25Db250cm9sbGVyCiAgICAgICAgICAgIHJlc2VydmF0aW9uQ29udHJvbGxlciAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICAgdXNlciAtPiBzZWFjcmhDb250cm9sbGVyCiAgICAgICAgICAgIHNlYWNyaENvbnRyb2xsZXIgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiBwYXltZW50U2NyZWVuIAogICAgICAgICAgICBwYXltZW50U2NyZWVuIC0+IHBheW1lbnRDb250cm9sbGVyCiAgICAgICAgICAgIHBheW1lbnRDb250cm9sbGVyIC0+IHBheW1lbnRTeXN0ZW0KICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiBub3RpZmljYXRpb25TY3JlZW4KICAgICAgICAgICAgbm90aWZpY2F0aW9uU2NyZWVuIC0+IG5vdGlmaWNhdGlvbkNvbnRyb2xsZXIKICAgICAgICAgICAgbm90aWZpY2F0aW9uQ29udHJvbGxlciAtPiBub3RpZmljYXRpb25TeXN0ZW0KICAgICAgICAKICAgICAgICAgICAgLy8gZG9jdG9yCiAgICAgICAgICAgIGRvY3RvciAtPiBkb2N0b3JTY3JlZW4KICAgICAgICAgICAgZG9jdG9yU2NyZWVuIC0+IGRvY3RvckNvbnRyb2xsZXIKICAgICAgICAgICAgZG9jdG9yQ29udHJvbGxlciAtPiBEb2N0b3JEYXRhTWFuYWdlbWVudAogICAgICAgICAgICBEb2N0b3JEYXRhTWFuYWdlbWVudCAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICBkb2N0b3IgLT4gcmVzZXJ2YXRpb25TY3JlZW4KICAgICAgICAgICAgcmVzZXJ2YXRpb25TY3JlZW4gLT4gcmVzZXJ2YXRpb25Db250cm9sbGVyICJVc2VzIgogICAgICAgICAgICByZXNlcnZhdGlvbkNvbnRyb2xsZXIgLT4gUmVzZXJ2YXRpb25Nb2R1bGUKICAgICAgICAgICAgUmVzZXJ2YXRpb25Nb2R1bGUgLT4gZGF0YWJhc2UKICAgICAgICAgICAgCiAgICB9CgogICAgdmlld3MgewogICAgICAgIC8vIEFkZCB5b3VyIHZpZXdzIGhlcmUKICAgICAgICBkeW5hbWljIG1haW5TeXN0ZW0gewogICAgICAgICAgICB0aXRsZSAiQ29udGFpbmVyIE1lZHBvaW50IFN5c3RlbSIKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gd2ViICJ2aWV3cyBkYXRhIHVzZXIiCiAgICAgICAgICAgIHN1cGVyQWRtaW4gLT4gd2ViICJ2aWV3cyBkYXRhIGRvY3Rvciwgc2NoZWR1bGVzLCByZXNlcnZhdGlvbnMsIGFuZCBwYXltZW50cyIKICAgICAgICAgICAgdXNlciAtPiBtb2JpbGUgInJlcXVlc3QgcmVzZXJ2YXRpb24gb25saW5lIG1lZGljYWwiCiAgICAgICAgICAgIGRvY3RvciAtPiBtb2JpbGUgInZpZXdzICYgdXBkYXRlIHJlc2VydmF0aW9uIgogICAgICAgICAgICB3ZWIgLT4gYmFja2VuZCAiTWFrZXMgQVBJIENhbGxzIgogICAgICAgICAgICBtb2JpbGUgLT4gYmFja2VuZCAiTWFrZXMgQVBJIENhbGxzIgogICAgICAgICAgICBiYWNrZW5kIC0+IGRhdGFiYXNlICJTUUwvVENQIgogICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgZGF0YWJhc2UgLT4gcGF5bWVudFN5c3RlbSAiTWFrZXMgQVBJIENhbGxzIgogICAgICAgICAgICBkYXRhYmFzZSAtPiBub3RpZmljYXRpb25TeXN0ZW0gIkFQSSBDYWxscyIKICAgICAgICAgICAgbm90aWZpY2F0aW9uU3lzdGVtIC0+IHVzZXIgIlNlbmQgTm90aWYgdG8iCiAgICAgICAgICAgICAKICAgICAgICAgICAgYXV0b0xheW91dCBsciAKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgCiAgICAgICAgZHluYW1pYyB3ZWIgewogICAgICAgICAgICB0aXRsZSAiQ29tcG9uZW50IERpYWdyYW0iCiAgICAgICAgCiAgICAgICAgICAgIC8vIEFETUlOCiAgICAgICAgICAgIGFkbWluIC0+IGxvZ2luUGFnZQogICAgICAgICAgICBsb2dpblBhZ2UgLT4gbG9naW5QYWdlQ29udHJvbGxlcgogICAgICAgICAgICBsb2dpblBhZ2VDb250cm9sbGVyIC0+IEF1dGhNb2R1bGUKICAgICAgICAgICAgQXV0aE1vZHVsZSAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICBhZG1pbiAtPiBkYXNoYm9hcmRQYWdlCiAgICAgICAgICAgIGRhc2hib2FyZFBhZ2UgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gcmVzZXJ2YXRpb25QYWdlCiAgICAgICAgICAgIHJlc2VydmF0aW9uUGFnZSAtPiByZXNlcnZhdGlvblBhZ2VDb250cm9sbGVyCiAgICAgICAgICAgIHJlc2VydmF0aW9uUGFnZUNvbnRyb2xsZXIgLT4gUmVzZXJ2YXRpb25Nb2R1bGUKICAgICAgICAgICAgUmVzZXJ2YXRpb25Nb2R1bGUgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gZG9jdG9yTWFuYWdlbWVudFBhZ2UKICAgICAgICAgICAgZG9jdG9yTWFuYWdlbWVudFBhZ2UgLT4gZG9jdG9yTWFuYWdlbWVudFBhZ2VDb250cm9sbGVyCiAgICAgICAgICAgIGRvY3Rvck1hbmFnZW1lbnRQYWdlQ29udHJvbGxlciAtPiBEb2N0b3JEYXRhTWFuYWdlbWVudAogICAgICAgICAgICBEb2N0b3JEYXRhTWFuYWdlbWVudCAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICBhZG1pbiAtPiBwYXltZW50UGFnZQogICAgICAgICAgICBwYXltZW50UGFnZSAtPiBwYXltZW50UGFnZUNvbnRyb2xsZXIKICAgICAgICAgICAgcGF5bWVudFBhZ2VDb250cm9sbGVyIC0+IFBheW1lbnRTZXJ2aWNlCiAgICAgICAgICAgIFBheW1lbnRTZXJ2aWNlIC0+IHBheW1lbnRTeXN0ZW0KICAgICAgICAKICAgICAgICAgICAgYWRtaW4gLT4gbm90aWZpY2F0aW9uUGFnZQogICAgICAgICAgICBub3RpZmljYXRpb25QYWdlIC0+IG5vdGlmaWNhdGlvblBhZ2VDb250cm9sbGVyIAogICAgICAgICAgICBub3RpZmljYXRpb25QYWdlQ29udHJvbGxlciAtPiAgTm90aWZpY2F0aW9uU2VydmljZQogICAgICAgICAgICBOb3RpZmljYXRpb25TZXJ2aWNlIC0+IG5vdGlmaWNhdGlvblN5c3RlbQogICAgICAgIAogICAgICAgICAgICAvLyBzdXBlckFkbWluCiAgICAgICAgICAgIHN1cGVyQWRtaW4gLT4gbG9naW5QYWdlCiAgICAgICAgICAgIGxvZ2luUGFnZSAtPiBsb2dpblBhZ2VDb250cm9sbGVyCiAgICAgICAgICAgIGxvZ2luUGFnZUNvbnRyb2xsZXIgLT4gQXV0aE1vZHVsZQogICAgICAgICAgICBBdXRoTW9kdWxlIC0+IGRhdGFiYXNlCiAgICAgICAgCiAgICAgICAgICAgIHN1cGVyQWRtaW4gLT4gdXNlck1hbmFnZW1lbnRQYWdlCiAgICAgICAgICAgIHVzZXJNYW5hZ2VtZW50UGFnZSAtPiB1c2VyTWFuYWdlbWVudFBhZ2VDb250cm9sbGVyCiAgICAgICAgICAgIHVzZXJNYW5hZ2VtZW50UGFnZUNvbnRyb2xsZXIgLT4gVXNlck1hbmFnZW1lbnQKICAgICAgICAgICAgVXNlck1hbmFnZW1lbnQgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgc3VwZXJBZG1pbiAtPiBtYXN0ZXJEYXRhUGFnZQogICAgICAgICAgICBtYXN0ZXJEYXRhUGFnZSAtPiBtYXN0ZXJEYXRhUGFnZUNvbnRyb2xsZXIKICAgICAgICAgICAgbWFzdGVyRGF0YVBhZ2VDb250cm9sbGVyIC0+IE1hc3RlckRhdGFTZXJ2aWNlCiAgICAgICAgICAgIE1hc3RlckRhdGFTZXJ2aWNlIC0+IGRhdGFiYXNlCiAgICAgICAgCiAgICAgICAgICAgIC8vIHVzZXIKICAgICAgICAgICAgdXNlciAtPiBsb2dpblNjcmVlbgogICAgICAgICAgICBsb2dpblNjcmVlbiAtPiBsb2dpbkNvbnRyb2xsZXIKICAgICAgICAgICAgbG9naW5Db250cm9sbGVyIC0+IEF1dGhNb2R1bGUKICAgICAgICAgICAgQXV0aE1vZHVsZSAtPiBkYXRhYmFzZSAKICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiByZWdpc3RlclNjcmVlbgogICAgICAgICAgICByZWdpc3RlclNjcmVlbiAtPiByZWdpc3RlckNvbnRyb2xsZXIKICAgICAgICAgICAgcmVnaXN0ZXJDb250cm9sbGVyIC0+IEF1dGhNb2R1bGUKICAgICAgICAgICAgQXV0aE1vZHVsZSAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICB1c2VyIC0+IHJlc2VydmF0aW9uU2NyZWVuCiAgICAgICAgICAgIHJlc2VydmF0aW9uU2NyZWVuIC0+IHJlc2VydmF0aW9uQ29udHJvbGxlcgogICAgICAgICAgICByZXNlcnZhdGlvbkNvbnRyb2xsZXIgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiBzZWFjcmhDb250cm9sbGVyCiAgICAgICAgICAgIHNlYWNyaENvbnRyb2xsZXIgLT4gZGF0YWJhc2UKICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiBwYXltZW50U2NyZWVuIAogICAgICAgICAgICBwYXltZW50U2NyZWVuIC0+IHBheW1lbnRDb250cm9sbGVyCiAgICAgICAgICAgIHBheW1lbnRDb250cm9sbGVyIC0+IHBheW1lbnRTeXN0ZW0KICAgICAgICAKICAgICAgICAgICAgdXNlciAtPiBub3RpZmljYXRpb25TY3JlZW4KICAgICAgICAgICAgbm90aWZpY2F0aW9uU2NyZWVuIC0+IG5vdGlmaWNhdGlvbkNvbnRyb2xsZXIKICAgICAgICAgICAgbm90aWZpY2F0aW9uQ29udHJvbGxlciAtPiBub3RpZmljYXRpb25TeXN0ZW0KICAgICAgICAKICAgICAgICAgICAgLy8gZG9jdG9yCiAgICAgICAgICAgIGRvY3RvciAtPiBkb2N0b3JTY3JlZW4KICAgICAgICAgICAgZG9jdG9yU2NyZWVuIC0+IGRvY3RvckNvbnRyb2xsZXIKICAgICAgICAgICAgZG9jdG9yQ29udHJvbGxlciAtPiBEb2N0b3JEYXRhTWFuYWdlbWVudAogICAgICAgICAgICBEb2N0b3JEYXRhTWFuYWdlbWVudCAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICBkb2N0b3IgLT4gcmVzZXJ2YXRpb25TY3JlZW4KICAgICAgICAgICAgcmVzZXJ2YXRpb25TY3JlZW4gLT4gcmVzZXJ2YXRpb25Db250cm9sbGVyCiAgICAgICAgICAgIHJlc2VydmF0aW9uQ29udHJvbGxlciAtPiBSZXNlcnZhdGlvbk1vZHVsZQogICAgICAgICAgICBSZXNlcnZhdGlvbk1vZHVsZSAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgc3lzdGVtQ29udGV4dCBtYWluU3lzdGVtIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgY29udGFpbmVyIG1haW5TeXN0ZW0gewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiRWxlbWVudCIgewogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDU1MjdkCiAgICAgICAgICAgICAgICBzaGFwZSBwZXJzb24KICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA2NjI5NgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbnRhaW5lciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDc3M2FmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4NWJiZjAKICAgICAgICAgICAgICAgIGNvbG9yICMwMDAwMDAKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJFeHRlcm5hbCBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CiAgICB9Cn0="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "Dynamic-002",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "color" : "#ffffff",
+          "tag" : "Element"
+        }, {
+          "background" : "#05527d",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#066296",
+          "tag" : "Software System"
+        }, {
+          "background" : "#0773af",
+          "tag" : "Container"
+        }, {
+          "background" : "#85bbf0",
+          "color" : "#000000",
+          "tag" : "Component"
+        }, {
+          "background" : "#999999",
+          "tag" : "External System"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "39",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "56",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "order" : 4,
+      "relationships" : [ {
+        "id" : "100"
+      }, {
+        "id" : "107"
+      }, {
+        "id" : "138"
+      }, {
+        "id" : "144"
+      }, {
+        "id" : "148"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "70"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "81"
+      } ],
+      "softwareSystemId" : "5"
+    } ],
+    "dynamicViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 2200,
+        "width" : 4500
+      },
+      "elementId" : "5",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 3900,
+        "y" : 1169
+      }, {
+        "id" : "2",
+        "x" : 200,
+        "y" : 165
+      }, {
+        "id" : "3",
+        "x" : 200,
+        "y" : 865
+      }, {
+        "id" : "4",
+        "x" : 200,
+        "y" : 1565
+      }, {
+        "id" : "6",
+        "x" : 900,
+        "y" : 1515
+      }, {
+        "id" : "23",
+        "x" : 900,
+        "y" : 915
+      }, {
+        "id" : "39",
+        "x" : 1650,
+        "y" : 915
+      }, {
+        "id" : "48",
+        "x" : 2400,
+        "y" : 915
+      }, {
+        "id" : "55",
+        "x" : 3150,
+        "y" : 315
+      }, {
+        "id" : "56",
+        "x" : 3150,
+        "y" : 915
+      } ],
+      "externalBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Dynamic-001",
+      "order" : 1,
+      "relationships" : [ {
+        "description" : "views data user",
+        "id" : "57",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "views data doctor, schedules, reservations, and payments",
+        "id" : "59",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "request reservation online medical",
+        "id" : "61",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "views & update reservation",
+        "id" : "63",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Makes API Calls",
+        "id" : "65",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Makes API Calls",
+        "id" : "66",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "SQL/TCP",
+        "id" : "67",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "Makes API Calls",
+        "id" : "68",
+        "order" : "8",
+        "response" : false
+      }, {
+        "description" : "API Calls",
+        "id" : "70",
+        "order" : "9",
+        "response" : false
+      }, {
+        "description" : "Send Notif to",
+        "id" : "72",
+        "order" : "10",
+        "response" : false
+      } ],
+      "title" : "Container Medpoint System"
+    }, {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 3200,
+        "width" : 11390
+      },
+      "elementId" : "23",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 2131,
+        "y" : 165
+      }, {
+        "id" : "2",
+        "x" : 9244,
+        "y" : 165
+      }, {
+        "id" : "3",
+        "x" : 7369,
+        "y" : 165
+      }, {
+        "id" : "4",
+        "x" : 2856,
+        "y" : 165
+      }, {
+        "id" : "7",
+        "x" : 3219,
+        "y" : 865
+      }, {
+        "id" : "8",
+        "x" : 3219,
+        "y" : 1465
+      }, {
+        "id" : "9",
+        "x" : 3969,
+        "y" : 865
+      }, {
+        "id" : "10",
+        "x" : 3969,
+        "y" : 1465
+      }, {
+        "id" : "14",
+        "x" : 2469,
+        "y" : 865
+      }, {
+        "id" : "15",
+        "x" : 2469,
+        "y" : 1465
+      }, {
+        "id" : "16",
+        "x" : 219,
+        "y" : 865
+      }, {
+        "id" : "17",
+        "x" : 4719,
+        "y" : 865
+      }, {
+        "id" : "18",
+        "x" : 4719,
+        "y" : 1465
+      }, {
+        "id" : "19",
+        "x" : 969,
+        "y" : 865
+      }, {
+        "id" : "20",
+        "x" : 969,
+        "y" : 1465
+      }, {
+        "id" : "21",
+        "x" : 1719,
+        "y" : 865
+      }, {
+        "id" : "22",
+        "x" : 1719,
+        "y" : 1465
+      }, {
+        "id" : "24",
+        "x" : 7719,
+        "y" : 865
+      }, {
+        "id" : "25",
+        "x" : 7719,
+        "y" : 1465
+      }, {
+        "id" : "26",
+        "x" : 9969,
+        "y" : 865
+      }, {
+        "id" : "27",
+        "x" : 6969,
+        "y" : 865
+      }, {
+        "id" : "28",
+        "x" : 6969,
+        "y" : 1465
+      }, {
+        "id" : "29",
+        "x" : 8469,
+        "y" : 865
+      }, {
+        "id" : "30",
+        "x" : 8469,
+        "y" : 1465
+      }, {
+        "id" : "31",
+        "x" : 9219,
+        "y" : 865
+      }, {
+        "id" : "32",
+        "x" : 9219,
+        "y" : 1465
+      }, {
+        "id" : "33",
+        "x" : 5469,
+        "y" : 865
+      }, {
+        "id" : "34",
+        "x" : 5469,
+        "y" : 1465
+      }, {
+        "id" : "35",
+        "x" : 6219,
+        "y" : 865
+      }, {
+        "id" : "36",
+        "x" : 6219,
+        "y" : 1465
+      }, {
+        "id" : "37",
+        "x" : 10719,
+        "y" : 865
+      }, {
+        "id" : "38",
+        "x" : 9969,
+        "y" : 1465
+      }, {
+        "id" : "40",
+        "x" : 7719,
+        "y" : 2065
+      }, {
+        "id" : "41",
+        "x" : 6969,
+        "y" : 2065
+      }, {
+        "id" : "42",
+        "x" : 9969,
+        "y" : 2065
+      }, {
+        "id" : "43",
+        "x" : 8469,
+        "y" : 2065
+      }, {
+        "id" : "44",
+        "x" : 9219,
+        "y" : 2065
+      }, {
+        "id" : "45",
+        "x" : 5469,
+        "y" : 2065
+      }, {
+        "id" : "46",
+        "x" : 6219,
+        "y" : 2065
+      }, {
+        "id" : "48",
+        "x" : 7719,
+        "y" : 2665
+      }, {
+        "id" : "55",
+        "x" : 2902,
+        "y" : 2665
+      }, {
+        "id" : "56",
+        "x" : 4294,
+        "y" : 2665
+      } ],
+      "externalBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Dynamic-002",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "73",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "74",
+        "order" : "2",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7794,
+          "y" : 1315
+        } ]
+      }, {
+        "id" : "75",
+        "order" : "3",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7794,
+          "y" : 1915
+        } ]
+      }, {
+        "id" : "129",
+        "order" : "4",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7794,
+          "y" : 2515
+        } ]
+      }, {
+        "id" : "79",
+        "order" : "5",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 9819,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "80",
+        "order" : "6",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 10569,
+          "y" : 1465
+        }, {
+          "x" : 10598,
+          "y" : 1961
+        }, {
+          "x" : 10598,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "82",
+        "order" : "7",
+        "response" : false
+      }, {
+        "id" : "83",
+        "order" : "8",
+        "response" : false
+      }, {
+        "id" : "84",
+        "order" : "9",
+        "response" : false
+      }, {
+        "id" : "160",
+        "order" : "10",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7475,
+          "y" : 2632
+        } ]
+      }, {
+        "id" : "88",
+        "order" : "11",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8319,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "89",
+        "order" : "12",
+        "response" : false
+      }, {
+        "id" : "90",
+        "order" : "13",
+        "response" : false
+      }, {
+        "id" : "154",
+        "order" : "14",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8225,
+          "y" : 2397
+        } ]
+      }, {
+        "id" : "94",
+        "order" : "15",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 6069,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "95",
+        "order" : "16",
+        "response" : false
+      }, {
+        "id" : "96",
+        "order" : "17",
+        "response" : false
+      }, {
+        "id" : "99",
+        "order" : "18",
+        "response" : false
+      }, {
+        "id" : "101",
+        "order" : "19",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 6819,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "102",
+        "order" : "20",
+        "response" : false
+      }, {
+        "id" : "103",
+        "order" : "21",
+        "response" : false
+      }, {
+        "id" : "106",
+        "order" : "22",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 6069,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "108",
+        "order" : "23",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8319,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "74",
+        "order" : "24",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8094,
+          "y" : 1315
+        } ]
+      }, {
+        "id" : "75",
+        "order" : "25",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8094,
+          "y" : 1915
+        } ]
+      }, {
+        "id" : "129",
+        "order" : "26",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8094,
+          "y" : 2515
+        } ]
+      }, {
+        "id" : "112",
+        "order" : "27",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 10569,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "113",
+        "order" : "28",
+        "response" : false
+      }, {
+        "id" : "114",
+        "order" : "29",
+        "response" : false
+      }, {
+        "id" : "117",
+        "order" : "30",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 9819,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "118",
+        "order" : "31",
+        "response" : false
+      }, {
+        "id" : "119",
+        "order" : "32",
+        "response" : false
+      }, {
+        "id" : "120",
+        "order" : "33",
+        "response" : false
+      }, {
+        "id" : "123",
+        "order" : "34",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 9069,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "124",
+        "order" : "35",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 3069,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "125",
+        "order" : "36",
+        "response" : false
+      }, {
+        "id" : "126",
+        "order" : "37",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 3819,
+          "y" : 1869
+        }, {
+          "x" : 7569,
+          "y" : 1961
+        } ]
+      }, {
+        "id" : "129",
+        "order" : "38",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7644,
+          "y" : 2515
+        } ]
+      }, {
+        "id" : "130",
+        "order" : "39",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 2706,
+          "y" : 565
+        }, {
+          "x" : 3819,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "131",
+        "order" : "40",
+        "response" : false
+      }, {
+        "id" : "132",
+        "order" : "41",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 4569,
+          "y" : 1869
+        }, {
+          "x" : 7569,
+          "y" : 1961
+        } ]
+      }, {
+        "id" : "129",
+        "order" : "42",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8244,
+          "y" : 2515
+        } ]
+      }, {
+        "id" : "135",
+        "order" : "43",
+        "response" : false
+      }, {
+        "id" : "136",
+        "order" : "44",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 2544,
+          "y" : 1315
+        } ]
+      }, {
+        "id" : "137",
+        "order" : "45",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 3069,
+          "y" : 1869
+        }, {
+          "x" : 5290,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "139",
+        "order" : "46",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 819,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "140",
+        "order" : "47",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 819,
+          "y" : 1869
+        }, {
+          "x" : 3365,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "141",
+        "order" : "48",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1569,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "142",
+        "order" : "49",
+        "response" : false
+      }, {
+        "id" : "143",
+        "order" : "50",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 2365,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "145",
+        "order" : "51",
+        "response" : false
+      }, {
+        "id" : "146",
+        "order" : "52",
+        "response" : false
+      }, {
+        "id" : "147",
+        "order" : "53",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 2319,
+          "y" : 1869
+        }, {
+          "x" : 3623,
+          "y" : 2469
+        } ]
+      }, {
+        "id" : "149",
+        "order" : "54",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 4569,
+          "y" : 761
+        } ]
+      }, {
+        "id" : "150",
+        "order" : "55",
+        "response" : false
+      }, {
+        "id" : "151",
+        "order" : "56",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 5290,
+          "y" : 1869
+        }, {
+          "x" : 8319,
+          "y" : 1961
+        } ]
+      }, {
+        "id" : "154",
+        "order" : "57",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 8412,
+          "y" : 2632
+        } ]
+      }, {
+        "id" : "155",
+        "order" : "58",
+        "response" : false
+      }, {
+        "id" : "136",
+        "order" : "59",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 2844,
+          "y" : 1315
+        } ]
+      }, {
+        "id" : "157",
+        "order" : "60",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 3069,
+          "y" : 1869
+        }, {
+          "x" : 6819,
+          "y" : 1961
+        } ]
+      }, {
+        "id" : "160",
+        "order" : "61",
+        "response" : false,
+        "vertices" : [ {
+          "x" : 7662,
+          "y" : 2397
+        } ]
+      } ],
+      "title" : "Component Diagram"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "56",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "58"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "69"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "72"
+      } ],
+      "softwareSystemId" : "5"
+    } ]
+  }
+}
