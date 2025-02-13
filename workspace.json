@@ -3,7 +3,8 @@
   "description" : "platform yang memungkinkan pengguna untuk melakukan berbagai jenis reservasi medis online",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2025-02-13T13:09:42Z",
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-02-13T13:34:39Z",
   "model" : {
     "people" : [ {
       "description" : "Make reservations and make payments",
@@ -1146,7 +1147,8 @@
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "Dynamic-001",
+      "lastSavedView" : "SystemContext-001",
+      "metadataSymbols" : "SquareBrackets",
       "styles" : {
         "elements" : [ {
           "color" : "#ffffff",
@@ -1815,7 +1817,7 @@
     } ],
     "systemContextViews" : [ {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1823,34 +1825,38 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
+      "dimensions" : {
+        "height" : 2900,
+        "width" : 2300
+      },
       "elements" : [ {
         "id" : "1",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 2265
       }, {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 165
       }, {
         "id" : "3",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 865
       }, {
         "id" : "4",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 1565
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 900,
+        "y" : 1615
       }, {
         "id" : "55",
-        "x" : 0,
-        "y" : 0
+        "x" : 1650,
+        "y" : 1615
       }, {
         "id" : "56",
-        "x" : 0,
-        "y" : 0
+        "x" : 1650,
+        "y" : 2240
       } ],
       "enterpriseBoundaryVisible" : true,
       "generatedKey" : true,
@@ -1859,7 +1865,11 @@
       "relationships" : [ {
         "id" : "58"
       }, {
-        "id" : "60"
+        "id" : "60",
+        "vertices" : [ {
+          "x" : 600,
+          "y" : 715
+        } ]
       }, {
         "id" : "62"
       }, {
